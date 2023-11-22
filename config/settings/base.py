@@ -11,6 +11,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+PROJECT_APPS = ["apps.account", "apps.commons", "apps.core"]
+THIRD_PARTY_APPS = []
+INSTALLED_APPS += PROJECT_APPS + THIRD_PARTY_APPS
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -67,5 +71,7 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
+
+AUTH_USER_MODEL = "account.User"  # (app_name.ModelName)
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
