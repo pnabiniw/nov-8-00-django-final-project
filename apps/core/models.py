@@ -24,6 +24,15 @@ class Job(BaseModel):
 
 
 class JobApplication(BaseModel):
+    status_choices = [
+        ("APPLIED", "Applied"),
+        ("SCREENING", "Screening"),
+        ("SHORT_LISTED", "Short Listed"),
+        ("REJECTED", "Rejected"),
+        ("SELECTED", "Selected")
+    ]
     job = models.ForeignKey(Job, on_delete=models.CASCADE, related_name="job_applications")
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="user_applications")
+    interview_date = models.DateTimeField(null=True, blank=True)
+    status = models.CharField(choices=status_choices, max_length=20)
 

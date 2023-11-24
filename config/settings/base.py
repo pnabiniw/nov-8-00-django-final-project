@@ -12,7 +12,7 @@ INSTALLED_APPS = [
 ]
 
 PROJECT_APPS = ["apps.account", "apps.commons", "apps.core"]
-THIRD_PARTY_APPS = []
+THIRD_PARTY_APPS = ['crispy_forms', 'crispy_bootstrap4']
 INSTALLED_APPS += PROJECT_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
@@ -30,8 +30,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -71,7 +70,11 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'static'
+]
 
 AUTH_USER_MODEL = "account.User"  # (app_name.ModelName)
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
