@@ -11,6 +11,9 @@ class Category(BaseModel):
     def __str__(self):
         return self.title
 
+    class Meta:
+        verbose_name_plural = "Categories"
+
 
 class Job(BaseModel):
     title = models.CharField(max_length=50)
@@ -36,3 +39,9 @@ class JobApplication(BaseModel):
     interview_date = models.DateTimeField(null=True, blank=True)
     status = models.CharField(choices=status_choices, max_length=20)
 
+
+class Contact(BaseModel):
+    name = models.CharField(max_length=20)
+    email = models.EmailField()
+    phone_number = models.CharField(max_length=14, null=True, blank=True)
+    message = models.TextField(max_length=1000)
