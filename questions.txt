@@ -1,0 +1,33 @@
+1. What is ORM (Object Relational Mapping) ?
+        Select * from student where student_id=1  => student obj with id 1
+        Student.objects.filter(id=1)
+        SQLAlchemy is used as an ORM tool for the Python Projects.
+2. What architecture does Django use?
+3. Difference between MVC and MVT architecture.
+4. What is the ORM to get all the rows from a table (Student)? Student.objects.all()
+5. Difference in .get() and .filter() in ORM.  qs => [<obj1>, <obj2>,]
+6. How to handle static assets and media in Django?
+7. What is DEBUG=True in django settings?
+8. What is the use of SECRET_KEY in Django?
+9. What are different types of Model Relations in django?
+10. What is the use of related_name in django models?
+11. Why we use DRF though we can create API using vanilla Django
+12. What are serializers? What do they do? (Serialization and Deserialization)
+13. When to use GenericViews and ViewSet
+
+9860185474
+ASYNCIO
+Design Patterns
+Data Structure Algorithm
+Cloud Computing (AWS / Azure)
+
+React (Javascript, FE development)
+Web Designing (HTMl, CSS, Material, Bootstrap, Figma, Adobe XD, Photoshop)
+
+
+# Namespaces
+# Iterators and Iterables
+# Generators and Decorators
+# Design Patterns for intermediate level
+# Memory Mgmt in python
+# Unit Testing
